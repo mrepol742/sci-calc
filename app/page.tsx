@@ -258,10 +258,12 @@ export default function Calculator() {
               style={{ layout: "vertical" }}
               createOrder={(data, actions) => {
                 return actions.order.create({
+                  intent: "CAPTURE",
                   purchase_units: [
                     {
                       amount: {
                         value: "0.99",
+                        currency_code: "USD",
                       },
                       description: "Unlock One Calculator Answer",
                     },
