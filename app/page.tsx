@@ -63,7 +63,7 @@ export default function Calculator() {
   return (
     <>
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800">
-        <div className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-2xl w-[400px] border border-white/20">
+        <div className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-2xl w-[400px] border border-white/20 m-3">
           <div className="bg-black text-green-400 p-4 rounded-lg mb-6 text-right text-xl font-mono h-24 flex flex-col justify-center">
             <div className="truncate">{expression || "0"}</div>
             {unlockForThisResult && (
@@ -71,7 +71,7 @@ export default function Calculator() {
             )}
 
             {!unlockForThisResult && result !== null && (
-              <div className="text-red-400 text-sm">
+              <div className="text-red-400 text-sm animation-pulse mt-1">
                 🔒 Pay $0.99 to reveal this answer
               </div>
             )}
